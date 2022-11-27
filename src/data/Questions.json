@@ -1,0 +1,45 @@
+{
+    "quiz": [
+        {
+            "id": 1,
+            "qus": "Which number will come in place of (?)",
+            "src": "img/duck.png",
+            "op": [
+                97,
+                96,
+                98,
+                95,
+                100
+            ],
+            "ans": "C"
+        },
+        {
+            "id": 2,
+            "qus": "The expanded form of 86 is",
+            "op": [
+                "8 + 60",
+                "80 + 6",
+                "8 + 6",
+                "8 - 6"
+            ],
+            "ans": "B"
+        },
+        {
+            "id": 3,
+            "qus": "Select the smallest number",
+            "src": [
+                "img/34.png",
+                "img/32.png",
+                "img/20.png",
+                "img/33.png"
+            ],
+            "op": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "ans" : "C"
+        }
+    ]
+}

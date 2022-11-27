@@ -1,0 +1,77 @@
+.body-quizcomp{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    width: 50%;
+}
+.score-bar{
+    padding-left:350px ;
+    display: inline-flex;
+    align-content: space-around;
+    justify-content: space-around;
+    font-size: 2rem;
+}
+.question-quizcomp{
+    width: 100%;
+    text-align: center;
+}
+.question-quizcomp h4{
+    font-size: 2rem;
+    display: inline;
+}
+.question-img{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    align-items: stretch;
+    margin-top: 20px;
+}
+.question-img img{
+    max-width: 100px;
+}
+.ans-divbody{
+    margin: 20px auto;
+}
+.ans-divs{
+    float: left;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    width: 100px;
+    height: 50px;
+    border-bottom: 2px solid #000;
+}
+.ans-divs h1{
+    display: inline;
+    font-size: 3rem;
+}
+.inputkeys{
+    max-width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.inputkeys > button{
+    margin: 2px;
+    width: 20px;
+    text-transform: capitalize;
+}
+.question-swap{
+    margin: 10px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-direction: row;
+}
+.question-swap button{
+    margin: 10px;
+}
