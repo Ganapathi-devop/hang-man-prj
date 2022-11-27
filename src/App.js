@@ -1,13 +1,14 @@
+import { useMemo, useRef, useState } from "react";
 import "./App.css";
-import Data from "./data/Questions.json";
 import HangManComp from "./components/HangManComp";
 import QuizComp from "./components/QuizComp";
-import { useEffect, useMemo, useRef, useState } from "react";
+import Data from "./data/Questions.json";
 
 function App() {
   const [getScore, setScore] = useState(0);
-  // const[lost, setLost] = useState(0);
+  const [lose,setLose] = useState([])
   const lost = useRef(0);
+  var newArr = []
 
   const hangman = [
     <div className="head-hangman"></div>,
@@ -20,8 +21,11 @@ function App() {
   ];
   const loseChange = (p) => {
     if (p) {
-      // setLost(lost+1)
       lost.current = lost.current + 1;
+      for(let i=0 ; i<lost.current; i++){
+        newArr.push(hangman[i])
+      }
+      setLose(newArr)
     }
   };
   const lostMemo = useMemo(loseChange, lost);
@@ -31,25 +35,13 @@ function App() {
     if (qus.ans === ans) {
       setScore(getScore + 1);
     } else {
-      // setLost(lost+1)
-      // loseChange(true)
-      lost.current = lost.current + 1;
+      loseChange(true)
     }
   };
-  const lostHandler = () => {
-    for (let i = 0; i < lostMemo; i++) {
-      console.log(lostMemo);
-      console.log(i);
-      return hangman[i];
-    }
-  };
-  useEffect(() => {
-    lostHandler();
-  }, [lost.current]);
   return (
     <div className="App">
       <div className="game">
-        <HangManComp lost={lost} lostHandler={lostHandler} />
+        <HangManComp lost={lost.current} arr={newArr} newArr={lose}/>
         <QuizComp quiz={Data.quiz} score={getScore} ansChecker={ansChecker} />
       </div>
     </div>

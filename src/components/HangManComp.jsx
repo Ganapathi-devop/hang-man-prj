@@ -1,27 +1,6 @@
-import { useEffect, useMemo, useState } from "react";
 import "./hangmancomp.css";
 
-function HangManComp({lost, lostHandler}) {
-  console.log(lost)
-  const [getlose, setlose] = useState(lost)
-  const hangman = [
-    <div className="head-hangman"></div>,
-    <div className="body-hangman"></div>,
-    <div className="lefthand-hangman"></div>,
-    <div className="righthand-hangman"></div>,
-    <div className="leftleg-hangman"></div>,
-    <div className="rightleg-hangman"></div>,
-    <div className="strightpole-hangman"></div>,
-  ];
-  // useEffect(lostHandler(hangman), [lost])
-  // const lostHandler = ()=>{
-  //   for(let i =0 ; i<getlose; i++){
-  //     console.log(getlose + "lost handler")
-  //     console.log(i + "losthandler i")
-  //     return hangman[i]
-  //   }
-  // }
-  
+function HangManComp({lost, arr,newArr}) {
   return (
     <div className="body-hangmancomp">
       <div className="pole-hangman">
@@ -33,16 +12,9 @@ function HangManComp({lost, lostHandler}) {
       <div className="full-hangman">
         {lost > 0 ? hangman[hangman.length-1] : ''}
         {
-          lostHandler(hangman)
+          newArr.map(item=>item)
         }
       </div>
-      {/* hello
-      <div className="head-hangman"></div>
-      <div className="body-hangman"></div>
-      <div className="lefthand-hangman"></div>
-      <div className="righthand-hangman"></div>
-      <div className="leftleg-hangman"></div>
-      <div className="rightleg-hangman"></div> */}
     </div>
   );
 }

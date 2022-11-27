@@ -30,7 +30,7 @@
 }
 .body-hangman{
     width: 2px;
-    height: 250px;
+    height: 200px;
     background-color: #000;
     border: 5px solid #000;
     left: 70px;
@@ -41,7 +41,7 @@
     background-color: #000;
     border: 5px solid #000;
     transform: rotate(45deg);  
-    top: -245px;
+    top: -202px;
     left: 12px; 
 }
 .righthand-hangman{
@@ -51,7 +51,7 @@
     border: 5px solid #000;
     transform: rotate(-45deg);
     left: 125px;
-    top: -410px;
+    top: -365px;
 }
 .rightleg-hangman{
     width: 2px;
