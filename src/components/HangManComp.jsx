@@ -1,6 +1,6 @@
 import "./hangmancomp.css";
 
-function HangManComp({lost, arr,newArr}) {
+function HangManComp({ lost, hangman, newArr }) {
   return (
     <div className="body-hangmancomp">
       <div className="pole-hangman">
@@ -9,14 +9,18 @@ function HangManComp({lost, arr,newArr}) {
         <div className="stright-pole"></div>
         <div className="bottom-pole"></div>
       </div>
-      <div className="full-hangman">
-        {lost > 0 ? hangman[hangman.length-1] : ''}
-        {
-          newArr.map(item=>item)
-        }
-      </div>
+      <FullHangmanDiv lost = {lost} hangman={hangman} newArr={newArr}/>
     </div>
   );
 }
 
 export default HangManComp;
+
+export const FullHangmanDiv = ({lost, hangman, newArr}) => {
+  return (
+    <div className="full-hangman">
+      {lost > 0 ? hangman[hangman.length - 1] : ""}
+      {newArr.map((item) => item)}
+    </div>
+  );
+};

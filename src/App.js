@@ -6,9 +6,9 @@ import Data from "./data/Questions.json";
 
 function App() {
   const [getScore, setScore] = useState(0);
-  const [lose,setLose] = useState([])
+  const [lose, setLose] = useState([]);
   const lost = useRef(0);
-  var newArr = []
+  var newArr = [];
 
   const hangman = [
     <div className="head-hangman"></div>,
@@ -22,30 +22,36 @@ function App() {
   const loseChange = (p) => {
     if (p) {
       lost.current = lost.current + 1;
-      for(let i=0 ; i<lost.current; i++){
-        newArr.push(hangman[i])
+      for (let i = 0; i < lost.current; i++) {
+        newArr.push(hangman[i]);
       }
-      setLose(newArr)
+      if (newArr.length <= 7) {
+        setLose(newArr);
+      }
     }
   };
-  const lostMemo = useMemo(loseChange, lost);
   const ansChecker = (props) => {
     let qus = Data.quiz[props[1] - 1];
     let ans = props[0];
     if (qus.ans === ans) {
       setScore(getScore + 1);
     } else {
-      loseChange(true)
+      loseChange(true);
     }
   };
   return (
     <div className="App">
       <div className="game">
-        <HangManComp lost={lost.current} arr={newArr} newArr={lose}/>
+        <HangManComp lost={lost.current} hangman={hangman} newArr={lose} />
         <QuizComp quiz={Data.quiz} score={getScore} ansChecker={ansChecker} />
       </div>
+      <RetryDiv />
     </div>
   );
 }
 
 export default App;
+
+export const RetryDiv = () => {
+  return <div></div>;
+};
