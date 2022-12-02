@@ -69,13 +69,7 @@ function QuizComp(props) {
 }
 
 export default QuizComp;
-{
-  /* <div className="ans-divbody">
-      <div className="ans-divs">
-        <h1></h1>
-      </div>
-    </div> */
-}
+
 export const InputKeys = ({ op, ansHandle }) => {
   var alphabet = [
     "a",

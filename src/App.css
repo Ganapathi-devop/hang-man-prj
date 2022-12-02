@@ -1,11 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&display=swap');
+
 .App {
   display: flex;
   max-width: 100vw;
   max-height: 100vh;
-  
 }
-.game{
+
+.game {
   display: inherit;
   width: 100vw;
   height: 100vh;
+}
+.display-none{
+  display: none;
+}
+.pop-div-bg {
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(5px);
+}
+
+.pop-div {
+  box-sizing: border-box;
+  padding: 1rem;
+  z-index: 2;
+  text-align: center;
+  position: fixed;
+  top: 20%;
+  left: 30%;
+  width: 600px;
+  height: 500px;
+  background-color: #000;
+}
+
+.game-over {
+  display: inline;
+  font-family: 'Fruktur', cursive;
+  font-weight: 700;
+  font-size: 5rem;
+  background: -webkit-linear-gradient(bottom, #F7E90E, #E70800);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.txt-pop-div {
+  margin: 1rem;
+  padding: 10px;
+  font-size: 2rem;
+  color: #fff;
+  font-family: 'Grandstander';
+}
+.img-pop-div{
+  width: 100%;
+  box-sizing: border-box;
+  float: left;
+  height: 5rem;
+  margin: .2rem;
+  padding: .5rem;
 }
