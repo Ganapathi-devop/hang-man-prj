@@ -39,7 +39,94 @@
                 3,
                 4
             ],
-            "ans" : "C"
+            "ans": "C"
+        },
+        {
+            "id": 4,
+            "qus": "There are 7 ones and 8 tens in ________",
+            "op": [
+                78,
+                29,
+                32,
+                87
+            ],
+            "ans": "D"
+        },
+        {
+            "id": 5,
+            "qus": "Which of the following is a correct match",
+            "op": [
+                "71 - Seventy Two",
+                "37 - Thiry Three",
+                "61 - Six One",
+                "49 - Ninety Four"
+            ],
+            "ans": "C"
+        },
+        {
+            "id": 6,
+            "qus": "How many stamps are there in the picture?",
+            "src": [
+                "img/10_stamps.jpg"
+            ],
+            "op": [
+                20,
+                10,
+                36,
+                40
+            ],
+            "ans": "B"
+        },
+        {
+            "id": 7,
+            "qus": "There are only 8 chickens and 4 chicks in a farm. How many total birds are there in the farm?",
+            "src": [
+                "img/four-chicks.jpg",
+                "img/8-chickens.jpeg"
+            ],
+            "op": [
+                14,
+                12,
+                9,
+                10
+            ],
+            "ans": "B"
+        },
+        {
+            "id": 8,
+            "qus": "Shreya bought 12 cupcakes on Monday. 10 cupcakes on Tuesday and 34 cupcakes on Wednesday. How many cupcakes did she buy altogether?",
+            "op": [
+                58,
+                54,
+                56,
+                48
+            ],
+            "ans": "C"
+        },
+        {
+            "id": 9,
+            "qus": "In a jungle, there are only 5 lion, 4 elephant, 20 deer. How many animals are there in the jungle?",
+            "src": [
+                "img/lion-elephant-deer.jpg"
+            ],
+            "op": [
+                25,
+                22,
+                30,
+                29
+            ],
+            "ans" : "D"
+        },
+        {
+            "id": 10,
+            "qus": "Which of the following options is CORRECT?",
+            "op": [
+                "8 Tens + 2 One = 28",
+                "3 Ten + 4 One = 34",
+                "14 One + 5 One = 10",
+                "22 One + 6 One = 26"
+            ],
+            "ans" : "B"
         }
     ]
 }

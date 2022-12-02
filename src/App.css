@@ -5,6 +5,7 @@
   display: flex;
   max-width: 100vw;
   max-height: 100vh;
+  background-color: #8D72E1;
 }
 
 .game {
@@ -12,9 +13,11 @@
   width: 100vw;
   height: 100vh;
 }
-.display-none{
+
+.display-none {
   display: none;
 }
+
 .pop-div-bg {
   position: absolute;
   top: 0px;
@@ -35,6 +38,13 @@
   width: 600px;
   height: 500px;
   background-color: #000;
+  border-radius: 10px;
+  background: rgba(19, 18, 18, 0.85);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(10.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .game-over {
@@ -55,7 +65,8 @@
   color: #fff;
   font-family: 'Grandstander';
 }
-.img-pop-div{
+
+.img-pop-div {
   width: 100%;
   box-sizing: border-box;
   float: left;
