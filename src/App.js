@@ -25,6 +25,8 @@ function App() {
       console.log('gameoverhandle');
       setLose([])
       setScore(0)
+      setGameOver(false)
+      lost.current = 0
     }
   }
   const loseChange = (p) => {
@@ -86,7 +88,7 @@ export const RetryDiv = ({ gameOver, score, gameOverHandle }) => {
           <h4>High Score: {localStorage.getItem("highScore")}</h4>
         </div>
         <div className="btn-pop-div">
-          <Button variant="contained" color="success" onClick={gameOverHandle(true)}>
+          <Button variant="contained" color="success" onClick={()=>{gameOverHandle(true)}}>
             Restart
           </Button>
         </div>
