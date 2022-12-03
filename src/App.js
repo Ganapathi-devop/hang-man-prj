@@ -9,9 +9,8 @@ function App() {
   const [getScore, setScore] = useState(0);
   const [lose, setLose] = useState([]);
   const [gameOver, setGameOver] = useState(false);
+  const [newHighScore, setNewHighScore] = useState("");
   const lost = useRef(0);
-  var newArr = [];
-
   const hangman = [
     <div className="head-hangman"></div>,
     <div className="body-hangman"></div>,
@@ -20,16 +19,29 @@ function App() {
     <div className="leftleg-hangman"></div>,
     <div className="rightleg-hangman"></div>,
   ];
-  const gameOverHandle = (p) =>{
-    if(p){
-      console.log('gameoverhandle');
-      setLose([])
-      setScore(0)
-      setGameOver(false)
-      lost.current = 0
+  const newHighScoreHandle = (p) => {
+    if (p) {
+      var appDiv = document.querySelector(".App");
+      console.log("new high score handle");
+      document.querySelector(".App").classList.add("highscore-animation");
+      console.log(document.querySelector(".App"));
+      console.log(<NewHighScoreDiv />);
+      setTimeout(() => {
+        console.log("appended");
+        setNewHighScore(<NewHighScoreDiv />);
+      }, 1000);
     }
-  }
+  };
+  const gameOverHandle = (p) => {
+    if (p) {
+      setLose([]);
+      setScore(0);
+      setGameOver(false);
+      lost.current = 0;
+    }
+  };
   const loseChange = (p) => {
+    var newArr = [];
     if (p) {
       lost.current = lost.current + 1;
       for (let i = 0; i < lost.current; i++) {
@@ -54,27 +66,40 @@ function App() {
   return (
     <div className="App">
       <div className="game">
-        <HangManComp lost={lost.current}  hangmanArr={lose} />
+        <HangManComp lost={lost.current} hangmanArr={lose} />
         <QuizComp quiz={Data.quiz} score={getScore} ansChecker={ansChecker} />
       </div>
-      <RetryDiv gameOver={gameOver} score={getScore} gameOverHandle={gameOverHandle}/>
+      <RetryDiv
+        gameOver={gameOver}
+        score={getScore}
+        gameOverHandle={gameOverHandle}
+        newHighScoreHandle={newHighScoreHandle}
+      />
+      {newHighScore}
     </div>
   );
 }
 
 export default App;
 
-export const RetryDiv = ({ gameOver, score, gameOverHandle }) => {
+export const RetryDiv = ({
+  gameOver,
+  score,
+  gameOverHandle,
+  newHighScoreHandle,
+}) => {
   useEffect(() => {
-    if (gameOver === true && localStorage.getItem('highScore') === undefined) {
-        localStorage.setItem("highScore", `${score}`);
-      }
+    if (gameOver === true && localStorage.getItem("highScore") === undefined) {
+      localStorage.setItem("highScore", `${score}`);
+    }
   }, [gameOver, score]);
   useEffect(() => {
     if (
       localStorage.getItem("highScore") === undefined ||
       localStorage.getItem("highScore") < score
     ) {
+      newHighScoreHandle(true);
+
       localStorage.setItem("highScore", `${score}`);
     }
   }, [score]);
@@ -88,11 +113,43 @@ export const RetryDiv = ({ gameOver, score, gameOverHandle }) => {
           <h4>High Score: {localStorage.getItem("highScore")}</h4>
         </div>
         <div className="btn-pop-div">
-          <Button variant="contained" color="success" onClick={()=>{gameOverHandle(true)}}>
+          <Button
+            variant="contained"
+            color="success"
+            onClick={() => {
+              gameOverHandle(true);
+            }}
+          >
             Restart
           </Button>
         </div>
-        <img className="img-pop-div" src="img/evolution_of_the_stickman.jpg"  alt="evolution of stickman"/>
+        <img
+          className="img-pop-div"
+          src="img/evolution_of_the_stickman.jpg"
+          alt="evolution of stickman"
+        />
+      </div>
+    </div>
+  );
+};
+
+export const NewHighScoreDiv = () => {
+  var letter = "New High Score";
+  var letterArr = letter.split("");
+  console.log(letterArr);
+  return (
+    <div className="new-highscore-div">
+      <div className="popup-new-highscore-div">
+        <div>
+          {letterArr.map((i, index) => {
+            return (
+              <h4 className="jump-animation" style={{ "--item": `${index}` }}>
+                {i}
+              </h4>
+            );
+          })}
+        </div>
+        <h4 className="glow">{localStorage.getItem("highScore")}</h4>
       </div>
     </div>
   );
