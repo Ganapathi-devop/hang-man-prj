@@ -1,6 +1,7 @@
 import Button from "@mui/material/Button";
 import { useEffect, useRef, useState } from "react";
 import "./quizcomp.css";
+import "./responsive.css"
 
 function QuizComp(props) {
   const [questionGetter, questionSetter] = useState(props.quiz[1]);
@@ -27,7 +28,8 @@ function QuizComp(props) {
   return (
     <div className="body-quizcomp">
       <div className="score-bar">
-        <h4>Score:</h4> <h4 id="score">{props.score}</h4>
+        {/* <h4>Score: </h4> */}
+         <h4 id="score">Score: {props.score}</h4>
       </div>
       <div className="question-quizcomp">
         <h4 className="question-h4">{questionGetter.qus}</h4>

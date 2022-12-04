@@ -19,7 +19,7 @@ export default HangManComp;
 export const FullHangmanDiv = ({lost, hangmanArr}) => {
   return (
     <div className="full-hangman">
-      {lost > 0 ? <div className="strightpole-hangman"></div> : ""}
+      {lost > 0 ? <div className="strightpole-hangman"></div> : '' }
       {hangmanArr?.map((item) => item)}
     </div>
   );

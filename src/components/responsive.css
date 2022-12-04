@@ -1,0 +1,55 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    /* app comp */
+    .popup-new-highscore-div button{margin: 1rem;}
+    .jump-animation{font-size: 1.5rem;}
+    .glow{font-size: 1.5rem;}
+    /* quiz comp */
+    .body-quizcomp{width: 55%; max-width: 55%;}
+    .score-bar{padding-left: 0px; font-size: 1.2rem;}
+    .question-quizcomp h4{font-size: 1rem;}
+    .question-img img{max-width: 50px;}
+    .ans-divs{padding: 0%; width:2.5rem; height: 2rem;}
+    .ans-divs h1{font-size: 1rem;}
+    .inputkeys{max-width: 100%;}
+    .inputkeys > button{width: 1rem;}
+
+    /* hangman comp */
+    .body-hangmancomp{width: 40%; padding: 0%;}
+    .top-pole{width: 6.1rem; left: 45px; height: .5rem;}
+    .stright-pole{height: 20rem; width: .5rem;}
+    .bottom-pole{width: 10rem; height: .5rem;}
+    .side-pole{width: 4.1rem; height: .5rem; top: 75px; left: 25px;}
+    .full-hangman{width: 100px; height: 100px;}
+    .strightpole-hangman{width: .3rem; height: 2rem; left: 9.1rem; top: 3rem;}
+    .head-hangman{width: 2.5rem; height: 2.5rem; border: 3px solid; left: 7.8rem; top: 3rem;}
+    .body-hangman{width: .2rem; border: none; height: 9rem; left: 9.2rem; top: 2.8rem;}
+    .lefthand-hangman{border: none; width: .2rem; height: 5rem; top: -5.8rem; left: 7.55rem; transform: rotate(42deg);}
+    .righthand-hangman{border: none; width: .2rem; height: 5rem; top: -10.75rem; left: 10.9rem; transform: rotate(-42deg);}
+    .leftleg-hangman{border: none; width: .2rem; height: 5rem; top: -8rem; left: 7.56rem; transform: rotate(42deg);}
+    .rightleg-hangman{border: none; width: .2rem; height: 5rem; top: -13rem; left: 10.9rem; transform: rotate(-42deg);}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .score-bar{padding-left: 200px;}
+    
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .score-bar{
+        padding-left: 500px;
+    }
+}

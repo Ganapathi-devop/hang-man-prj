@@ -22,14 +22,15 @@ function App() {
   const newHighScoreHandle = (p) => {
     if (p) {
       var appDiv = document.querySelector(".App");
-      console.log("new high score handle");
-      document.querySelector(".App").classList.add("highscore-animation");
-      console.log(document.querySelector(".App"));
-      console.log(<NewHighScoreDiv />);
+      appDiv.classList.add("highscore-animation");
       setTimeout(() => {
-        console.log("appended");
-        setNewHighScore(<NewHighScoreDiv />);
+        setNewHighScore(
+          <NewHighScoreDiv newHighScoreHandle={newHighScoreHandle} />
+        );
       }, 1000);
+    } else {
+      document.querySelector(".App").classList.remove("highscore-animation");
+      setNewHighScore("");
     }
   };
   const gameOverHandle = (p) => {
@@ -65,10 +66,8 @@ function App() {
   };
   return (
     <div className="App">
-      <div className="game">
-        <HangManComp lost={lost.current} hangmanArr={lose} />
-        <QuizComp quiz={Data.quiz} score={getScore} ansChecker={ansChecker} />
-      </div>
+      <HangManComp lost={lost.current} hangmanArr={lose} />
+      <QuizComp quiz={Data.quiz} score={getScore} ansChecker={ansChecker} />
       <RetryDiv
         gameOver={gameOver}
         score={getScore}
@@ -133,7 +132,7 @@ export const RetryDiv = ({
   );
 };
 
-export const NewHighScoreDiv = () => {
+export const NewHighScoreDiv = ({ newHighScoreHandle }) => {
   var letter = "New High Score";
   var letterArr = letter.split("");
   console.log(letterArr);
@@ -150,6 +149,15 @@ export const NewHighScoreDiv = () => {
           })}
         </div>
         <h4 className="glow">{localStorage.getItem("highScore")}</h4>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => {
+            newHighScoreHandle(false);
+          }}
+        >
+          Continue
+        </Button>
       </div>
     </div>
   );
