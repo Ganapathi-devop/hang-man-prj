@@ -1,4 +1,5 @@
 @import url("./responsive.css");
+
 .body-hangmancomp{
     display: flex;
     padding: 10px;
@@ -10,8 +11,8 @@
     width: 200px;
     height: 500px;
     position: relative;
-    top: 217px;
-    left: -167px;
+    top: 160px;
+    left: -120px;
 }
 .full-hangman div{
     position: relative;
@@ -86,17 +87,17 @@
 }
 .top-pole{
     display: inline;
-    width: 200px;
+    width: 250px;
     height: 12px;
     background-color: #000;
     position: relative;
     top: 45px;
-    left:94px;
+    left:119px;
 }
 .stright-pole{
     display: inline;
     width: 12px;
-    height: 500px;
+    height: 600px;
     background-color: #000;
     position: relative;
     top: 45px;

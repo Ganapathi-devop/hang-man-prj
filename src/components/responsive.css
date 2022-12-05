@@ -32,8 +32,30 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .score-bar{padding-left: 200px;}
-    
+    /* app comp */
+    .pop-div{padding: .5rem; position: absolute; top: 20%; left: 20%; width: 500px; height: 500px;}
+
+    /* quiz comp */
+    .score-bar{padding-left: 200px; font-size: 1.5rem;}
+    .question-quizcomp h4{font-size: 1.2rem; font-weight: 500;}
+    .ans-divs{padding: 0%; width: 4.5rem; height: 2rem;}
+    .ans-divs h1{font-size: 1rem;}
+
+    /* hangman comp */
+    .body-hangmancomp{ padding: 0%;}
+    .top-pole{width: 8rem; left: 3.75rem; height: .5rem;}
+    .stright-pole{height: 23rem; width: .5rem;}
+    .bottom-pole{width: 10rem; height: .5rem;}
+    .side-pole{width: 4.1rem; height: .5rem; top: 75px; left: 25px;}
+    .full-hangman{width: 200px; height: 500px;}
+    .strightpole-hangman{width: .45rem; height: 2.5rem; left: 8.85rem; top: 1.5rem;}
+    .head-hangman{width: 2.5rem; height: 2.5rem; border: 4px solid; left: 7.65rem; top: 1.5rem;}
+    .body-hangman{width: .3rem; border: none; height: 8.5rem; left: 9rem; top: 1.5rem;}
+    .lefthand-hangman{border: none; width: .3rem; height: 5rem; top: -5.8rem; left: 7.26rem; transform: rotate(42deg);}
+    .righthand-hangman{border: none; width: .3rem; height: 5rem; top: -11rem; left: 10.6rem; transform: rotate(-42deg);}
+    .leftleg-hangman{border: none; width: .3rem; height: 5rem; top: -9.35rem; left: 7.25rem; transform: rotate(42deg);}
+    .rightleg-hangman{border: none; width: .3rem; height: 5rem; top: -14.5rem; left: 10.65rem; transform: rotate(-42deg);}
+
     
 }
 
@@ -49,7 +71,28 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    .score-bar{
-        padding-left: 500px;
-    }
+    /* app comp */
+    .pop-div{ padding: 1rem; position: fixed; top: 20%; left: 30%; width: 600px; height: 500px;}
+
+    /* quiz comp */
+    .score-bar{padding-left: 500px; font-size: 2rem;}
+    .question-quizcomp h4{font-size: 2rem; font-weight: 700;}
+    .ans-divs{padding: 5px; width: 100px; height: 50px;}
+    .ans-divs h1{font-size: 3rem;}
+
+    /* hangman comp */
+    .body-hangmancomp{ padding: 10px;}
+    .top-pole{width: 250px; left: 119px; height: 12px;}
+    .stright-pole{height: 600px; width: 12px;}
+    .bottom-pole{width: 200px; height: 12px;}
+    .side-pole{width: 110px; height: 12px; left: 40px; top: 95px;}
+    .full-hangman{width: 200px; height: 500px;}
+    .strightpole-hangman{width: 10px; height: 50px; left: 70px; top: 0px;}
+    .head-hangman{width: 100px; height: 100px; border: 5px solid; left: 20px; top: 0px;}
+    .body-hangman{width: 2px; border: 5px solid; height: 200px; left: 70px; top: 0px;}
+    .lefthand-hangman{border: 5px solid; width: 2px; height: 150px; top: -202px; left: 12px; transform: rotate(45deg);}
+    .righthand-hangman{border: 5px solid; width: 2px; height: 150px; top: -365px; left: 125px; transform: rotate(-45deg);}
+    .leftleg-hangman{border: 5px solid; width: 2px; height: 150px; top: -350px; left: 12px; transform: rotate(45deg);}
+    .rightleg-hangman{border: 5px solid; width: 2px; height: 150px; top: -512px; left: 125px; transform: rotate(-45deg);}
+
 }
