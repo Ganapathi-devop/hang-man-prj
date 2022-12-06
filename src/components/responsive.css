@@ -72,7 +72,7 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     /* app comp */
-    .pop-div{ padding: 1rem; position: fixed; top: 20%; left: 30%; width: 600px; height: 500px;}
+    .pop-div{ padding: 1rem; position: fixed; top: 20%; left: 32%; width: 600px; height: 500px;}
 
     /* quiz comp */
     .score-bar{padding-left: 500px; font-size: 2rem;}
