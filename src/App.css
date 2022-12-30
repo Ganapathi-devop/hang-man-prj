@@ -17,7 +17,7 @@
 
 
 .display-none {
-  display: none;
+  display: none !important;
 }
 
 .pop-div-bg {

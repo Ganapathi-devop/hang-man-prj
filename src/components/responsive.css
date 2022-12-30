@@ -1,33 +1,38 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     /* app comp */
+    .App{ flex-direction: column;}
     .popup-new-highscore-div button{margin: 1rem;}
     .jump-animation{font-size: 1.5rem;}
     .glow{font-size: 1.5rem;}
+    .pop-div-bg{width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; align-content: center;}
+    .pop-div{top: initial; left: initial; width: fit-content; height: fit-content;}
+    .game-over{font-size: 3rem;}
+    .txt-pop-div{font-size: 1.5rem; padding: 0%;}
     /* quiz comp */
-    .body-quizcomp{width: 55%; max-width: 55%;}
-    .score-bar{padding-left: 0px; font-size: 1.2rem;}
-    .question-quizcomp h4{font-size: 1rem;}
-    .question-img img{max-width: 50px;}
-    .ans-divs{padding: 0%; width:2.5rem; height: 2rem;}
+    .body-quizcomp{width: 100%; max-width: 100%; max-height: 100%;}
+    .score-bar{padding-left: 0px; font-size: 1.2rem; position: fixed; top: 0px; right: 10%;}
+    .question-quizcomp h4{font-size: 1.3rem;}
+    .question-img img{max-width: 60px;}
+    .ans-divs{padding: 0%; width:2rem; height: 1.5rem;}
     .ans-divs h1{font-size: 1rem;}
     .inputkeys{max-width: 100%;}
     .inputkeys > button{width: 1rem;}
 
     /* hangman comp */
-    .body-hangmancomp{width: 40%; padding: 0%;}
-    .top-pole{width: 6.1rem; left: 45px; height: .5rem;}
-    .stright-pole{height: 20rem; width: .5rem;}
+    .body-hangmancomp{width: 100%; max-width: 100%; padding: 0%;}
+    .top-pole{width: 6.5rem; left: 48px; height: .5rem;}
+    .stright-pole{height: 18.5rem; width: .5rem;}
     .bottom-pole{width: 10rem; height: .5rem;}
     .side-pole{width: 4.1rem; height: .5rem; top: 75px; left: 25px;}
     .full-hangman{width: 100px; height: 100px;}
-    .strightpole-hangman{width: .3rem; height: 2rem; left: 9.1rem; top: 3rem;}
-    .head-hangman{width: 2.5rem; height: 2.5rem; border: 3px solid; left: 7.8rem; top: 3rem;}
-    .body-hangman{width: .2rem; border: none; height: 9rem; left: 9.2rem; top: 2.8rem;}
-    .lefthand-hangman{border: none; width: .2rem; height: 5rem; top: -5.8rem; left: 7.55rem; transform: rotate(42deg);}
-    .righthand-hangman{border: none; width: .2rem; height: 5rem; top: -10.75rem; left: 10.9rem; transform: rotate(-42deg);}
-    .leftleg-hangman{border: none; width: .2rem; height: 5rem; top: -8rem; left: 7.56rem; transform: rotate(42deg);}
-    .rightleg-hangman{border: none; width: .2rem; height: 5rem; top: -13rem; left: 10.9rem; transform: rotate(-42deg);}
+    .strightpole-hangman{width: .3rem; height: 2rem; left: 1.5rem; top: -5rem;}
+    .head-hangman{width: 2.5rem; height: 2.5rem; border: 3px solid; left: 0.25rem; top: -5rem;}
+    .body-hangman{width: .2rem; border: none; height: 9rem; left: 1.55rem; top: -5rem;}
+    .lefthand-hangman{border: none; width: .2rem; height: 5rem; top: -13rem; left: -0.2rem; transform: rotate(42deg);}
+    .righthand-hangman{border: none; width: .2rem; height: 5rem; top: -18.15rem; left: 3.15rem; transform: rotate(-42deg);}
+    .leftleg-hangman{border: none; width: .2rem; height: 5rem; top: -15.7rem; left: 0rem; transform: rotate(42deg);}
+    .rightleg-hangman{border: none; width: .2rem; height: 5rem; top: -20.6rem; left: 3.2rem; transform: rotate(-42deg);}
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
