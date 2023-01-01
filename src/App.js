@@ -65,16 +65,18 @@ function App() {
     }
   };
   return (
-    <div className="App">
-      <HangManComp lost={lost.current} hangmanArr={lose} />
-      <QuizComp quiz={Data.quiz} score={getScore} ansChecker={ansChecker} />
-      <RetryDiv
-        gameOver={gameOver}
-        score={getScore}
-        gameOverHandle={gameOverHandle}
-        newHighScoreHandle={newHighScoreHandle}
-      />
-      {newHighScore}
+    <div className="background-img-div">
+      <div className="App">
+        <HangManComp lost={lost.current} hangmanArr={lose} />
+        <QuizComp quiz={Data.quiz} score={getScore} ansChecker={ansChecker} />
+        <RetryDiv
+          gameOver={gameOver}
+          score={getScore}
+          gameOverHandle={gameOverHandle}
+          newHighScoreHandle={newHighScoreHandle}
+        />
+        {newHighScore}
+      </div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-.body-quizcomp{
+.body-quizcomp {
     display: flex;
     flex-direction: column;
     align-content: space-around;
@@ -6,23 +6,32 @@
     align-items: center;
     max-width: 50%;
     width: 50%;
+    background-image: url("../../public/img/torn-paper-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(15px);
 }
-.score-bar{
-    padding-left:500px;
+
+.score-bar {
+    padding-left: 500px;
     display: flex;
     align-content: space-around;
     justify-content: space-around;
     font-size: 2rem;
 }
-.question-quizcomp{
+
+.question-quizcomp {
     width: 100%;
     text-align: center;
 }
-.question-quizcomp h4{
+
+.question-quizcomp h4 {
     font-size: 2rem;
     display: inline;
 }
-.question-img{
+
+.question-img {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -31,13 +40,16 @@
     align-items: stretch;
     margin-top: 20px;
 }
-.question-img img{
+
+.question-img img {
     max-width: 100px;
 }
-.ans-divbody{
+
+.ans-divbody {
     margin: 20px auto;
 }
-.ans-divs{
+
+.ans-divs {
     float: left;
     text-align: center;
     margin: 5px;
@@ -46,11 +58,13 @@
     height: 50px;
     border-bottom: 2px solid #000;
 }
-.ans-divs h1{
+
+.ans-divs h1 {
     display: inline;
     font-size: 3rem;
 }
-.inputkeys{
+
+.inputkeys {
     max-width: 80%;
     margin: 20px auto;
     display: flex;
@@ -58,20 +72,23 @@
     justify-content: space-around;
     align-items: center;
 }
-.inputkeys > button{
+
+.inputkeys>button {
     margin: 2px;
     width: 20px;
     text-transform: capitalize;
 }
-.question-swap{
+
+.question-swap {
     margin: 10px;
-    
+
     display: flex;
     align-items: center;
     justify-content: space-around;
     align-content: space-around;
     flex-direction: row;
 }
-.question-swap button{
+
+.question-swap button {
     margin: 10px;
 }
