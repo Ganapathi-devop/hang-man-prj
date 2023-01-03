@@ -58,15 +58,35 @@ function App() {
   const ansChecker = (props) => {
     let qus = Data.quiz[props[1] - 1];
     let ans = props[0];
+    var audio = new Audio();
+    var div = document.querySelector(".poping-papers-div");
     if (qus.ans === ans) {
       setScore(getScore + 1);
+      audio.src = "./audio/crt-ans.wav";
+      audio.play().then(
+        setTimeout(()=>{
+          div.classList.remove("display-none")
+        }, 100)
+      ).then(
+        setTimeout(() => {
+          div.classList.add("display-none");
+        }, 1000)
+      )
+      
     } else {
-      loseChange(true);
+      audio.src = "./audio/wrong-ans.wav"
+      audio.play().then(
+        loseChange(true)
+      );
+      div.classList.add("display-none");
     }
   };
   return (
     <div className="background-img-div">
       <div className="App">
+        <div className="poping-papers-div display-none">
+          <div className="poping-paper-bg"></div>
+        </div>
         <HangManComp lost={lost.current} hangmanArr={lose} />
         <QuizComp quiz={Data.quiz} score={getScore} ansChecker={ansChecker} />
         <RetryDiv

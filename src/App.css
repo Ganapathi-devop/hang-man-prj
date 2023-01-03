@@ -23,7 +23,28 @@
   background-size: cover;
   backdrop-filter: blur(15px);
 }
-
+.poping-papers-div{
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.poping-paper-bg{
+  width: 100%;
+  height: 100%;
+  background-image: url("../public/img/poping-papers.png");
+  background-position: center;
+  background-repeat: round;
+  animation: poping 1s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: 1;
+}
+@keyframes poping {
+  from {scale: unset;}
+  to{scale: 500%; overflow: hidden;}
+}
 .display-none {
   display: none !important;
 }
